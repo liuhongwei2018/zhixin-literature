@@ -171,7 +171,7 @@ class Catalogue:
         keep = {}
         for key, p in self.data["papers"].items():
             pub = valid_date(p.get("published")); updated = valid_date(p.get("version_updated"))
-            recent = max([v for v in [pub, updated, valid_date(p["first_seen"])] if v], default=None)
+            recent = max([v for v in [pub, updated] if v], default=valid_date(p["first_seen"]))
             if recent and (now.date()-date.fromisoformat(recent)).days <= max_age_days: keep[key] = p
         self.data["papers"] = keep
         self.reindex()

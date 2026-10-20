@@ -82,6 +82,11 @@ def ingest(cat, rows, track, profiles, now, run_id):
                 if track == "ALL" and not topics.evaluate(profiles[key]["ast"], body): continue
                 ranks[key] = topics.classify(p, key, profiles[key], now)
             if ranks:
+                # Update queries return many old papers. Screen all of them, but keep
+                # the HOT catalogue bounded to eligible papers and tracked identities.
+                # A known paper is always updated, including retractions/downgrades.
+                existing = any(a in cat.index for a in catalogue.aliases(p))
+                if not existing and not any(r["eligible"] for r in ranks.values()): continue
                 cat.update(p, ranks, datetime.now(timezone.utc).isoformat(), run_id)
                 accepted += 1
     except Exception:

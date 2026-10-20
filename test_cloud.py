@@ -147,6 +147,14 @@ class ClassificationAndIdentity(unittest.TestCase):
         with self.assertRaises(ValueError):sync.ingest(cat,[paper(),paper(source="invalid")],"CHIP_mCA",PROFILES,NOW,"r1")
         self.assertEqual(cat.data,before)
 
+    def test_old_update_rows_are_screened_without_bloating_hot_catalogue(self):
+        cat=catalogue.Catalogue()
+        self.assertEqual(sync.ingest(cat,[paper(published="2000-01-01")],"CHIP_mCA",PROFILES,NOW,"r1"),0)
+        self.assertFalse(cat.data["papers"])
+        sync.ingest(cat,[paper()],"CHIP_mCA",PROFILES,NOW,"r1")
+        sync.ingest(cat,[paper(retracted=True)],"CHIP_mCA",PROFILES,NOW,"r2")
+        self.assertTrue(cat.data["papers"]["pmid:12345"]["retracted"])
+
     def test_failed_old_day_remains_due_after_watermark(self):
         state=sync.initial_state(NOW)
         state["baseline_start"]="2026-09-01"
