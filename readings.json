@@ -1,0 +1,3991 @@
+{
+  "schema_version": 1,
+  "title": "知新 · 文献阅读清单",
+  "mode": "public_reading_mirror",
+  "generated_at": "2026-10-20T13:14:09.680720+00:00",
+  "source_as_of": "2026-10-20T12:26:12.524972+00:00",
+  "timezone": "Asia/Shanghai",
+  "daily_scan_local": "08:00",
+  "weekly_summary": "周一",
+  "scanner_location": "independent_local_backend",
+  "cloud_scanner_enabled": false,
+  "formal_hot_enabled": false,
+  "push_enabled": false,
+  "all_due_sources_complete": false,
+  "coverage": {
+    "complete": 21,
+    "total": 22,
+    "jobs": [
+      {
+        "track": "AI_medical_imaging",
+        "source": "arxiv",
+        "name": "arXiv",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "CHIP_mCA",
+        "source": "arxiv",
+        "name": "arXiv",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "clinical_observational",
+        "source": "arxiv",
+        "name": "arXiv",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "omics_methods_applications",
+        "source": "arxiv",
+        "name": "arXiv",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "ALL",
+        "source": "biorxiv",
+        "name": "bioRxiv",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "AI_medical_imaging",
+        "source": "epmc_new",
+        "name": "Europe PMC · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "CHIP_mCA",
+        "source": "epmc_new",
+        "name": "Europe PMC · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "clinical_observational",
+        "source": "epmc_new",
+        "name": "Europe PMC · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "omics_methods_applications",
+        "source": "epmc_new",
+        "name": "Europe PMC · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "AI_medical_imaging",
+        "source": "epmc_updates",
+        "name": "Europe PMC · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "CHIP_mCA",
+        "source": "epmc_updates",
+        "name": "Europe PMC · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "clinical_observational",
+        "source": "epmc_updates",
+        "name": "Europe PMC · 题录更新",
+        "status": "failed",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "omics_methods_applications",
+        "source": "epmc_updates",
+        "name": "Europe PMC · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "ALL",
+        "source": "medrxiv",
+        "name": "medRxiv",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "AI_medical_imaging",
+        "source": "pubmed_new",
+        "name": "PubMed · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "CHIP_mCA",
+        "source": "pubmed_new",
+        "name": "PubMed · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "clinical_observational",
+        "source": "pubmed_new",
+        "name": "PubMed · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "omics_methods_applications",
+        "source": "pubmed_new",
+        "name": "PubMed · 新收录",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "AI_medical_imaging",
+        "source": "pubmed_updates",
+        "name": "PubMed · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "CHIP_mCA",
+        "source": "pubmed_updates",
+        "name": "PubMed · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "clinical_observational",
+        "source": "pubmed_updates",
+        "name": "PubMed · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      },
+      {
+        "track": "omics_methods_applications",
+        "source": "pubmed_updates",
+        "name": "PubMed · 题录更新",
+        "status": "complete",
+        "start": "2026-10-13",
+        "through": "2026-10-19"
+      }
+    ]
+  },
+  "displayed_unique_papers": 107,
+  "papers": {
+    "pmid:42203206": {
+      "key": "pmid:42203206",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42203206/",
+      "title": "Association of haematopoietic mosaic loss of chromosome Y with dermatitis and eczema risk: an analysis in a large-scale prospective cohort study.",
+      "journal": "The British journal of dermatology",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.14.26365378": {
+      "key": "doi:10.64898/2026.10.14.26365378",
+      "url": "https://doi.org/10.64898/2026.10.14.26365378",
+      "title": "Clonal hematopoiesis and cell-free DNA characteristics in patients with high-risk large B-cell lymphomas",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-15",
+      "version_updated": "2026-10-15",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42886106": {
+      "key": "pmid:42886106",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42886106/",
+      "title": "Association of Life's Essential 8 With Clonal Hematopoiesis and Coronary Artery Disease.",
+      "journal": "JACC. CardioOncology",
+      "kind": "journal",
+      "published": "2026-10-15",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.10.26365222": {
+      "key": "doi:10.64898/2026.10.10.26365222",
+      "url": "https://doi.org/10.64898/2026.10.10.26365222",
+      "title": "More Than Half of DNMT3A-Mutant Patients in Pooled Public Cancer Genomic Data Carry No Tumor-Derived Mutation: Clonal Hematopoiesis Introduced by Patient-Keyed Aggregation",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-12",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42463292": {
+      "key": "pmid:42463292",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42463292/",
+      "title": "Clinical Impact and Dynamics of Clonal Hematopoiesis with 177Lu-PSMA-617 Therapy in Advanced Prostate Cancer.",
+      "journal": "Journal of nuclear medicine : official publication, Society of Nuclear Medicine",
+      "kind": "journal",
+      "published": "2026-10-01",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42856605": {
+      "key": "pmid:42856605",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42856605/",
+      "title": "ASXL1-Mutant Clonal Hematopoiesis is Associated with Calcific Aortic Valve Disease and Promotes Valvular Calcification In Vitro.",
+      "journal": "medRxiv : the preprint server for health sciences",
+      "kind": "preprint",
+      "published": "2026-09-29",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42805147": {
+      "key": "pmid:42805147",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42805147/",
+      "title": "Cardio-Oncological Sequelae of Autologous Stem Cell Transplantation: Role of Clonal Hematopoiesis in Cardiovascular Risk.",
+      "journal": "JACC. Advances",
+      "kind": "journal",
+      "published": "2026-09-28",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42805460": {
+      "key": "pmid:42805460",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42805460/",
+      "title": "Gene-Specific Analysis of Clonal Hematopoiesis Identifies the Association between ASXL1 and Lung Cancer Risk.",
+      "journal": "Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer",
+      "kind": "journal",
+      "published": "2026-09-28",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42806144": {
+      "key": "pmid:42806144",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42806144/",
+      "title": "Germline homologous recombination deficiency influences TP53-mutant clonal hematopoiesis fitness during platinum and PARP inhibitor treatment.",
+      "journal": "Nature genetics",
+      "kind": "journal",
+      "published": "2026-09-28",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42871440": {
+      "key": "pmid:42871440",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42871440/",
+      "title": "Derivation of a blood count-based machine learning model to prioritise sequencing for high-risk clonal haematopoiesis: a retrospective cohort study",
+      "journal": "EClinicalMedicine",
+      "kind": "journal",
+      "published": "2026-09-22",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42834788": {
+      "key": "pmid:42834788",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42834788/",
+      "title": "Loss of transcriptional factor Zbtb33 fails to induce clonal hematopoiesis in mice but plays a role in tumor growth.",
+      "journal": "Disease models & mechanisms",
+      "kind": "journal",
+      "published": "2026-10-06",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42831067": {
+      "key": "pmid:42831067",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42831067/",
+      "title": "TET 2-mutant clonal hematopoiesis is associated with peripheral bypass graft occlusion: A multicenter retrospective cohort pilot study.",
+      "journal": "JVS-vascular science",
+      "kind": "journal",
+      "published": "2026-08-23",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42877550": {
+      "key": "pmid:42877550",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42877550/",
+      "title": "Silent, but not innocent: the emerging role of clonal hematopoiesis in predicting therapy-related myeloid neoplasms",
+      "journal": "Frontiers in oncology",
+      "kind": "journal",
+      "published": "2026-09-30",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42878086": {
+      "key": "pmid:42878086",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42878086/",
+      "title": "Resolving the links between efferocytosis and DNMT3A mutation-driven clonal hematopoiesis in atherosclerosis.",
+      "journal": "The Journal of clinical investigation",
+      "kind": "journal",
+      "published": "2026-10-15",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42846836": {
+      "key": "pmid:42846836",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42846836/",
+      "title": "Clonal hematopoiesis of indeterminate potential and cancer immunotherapy: a host-intrinsic immune-inflammatory modifier of treatment efficacy and toxicity.",
+      "journal": "Frontiers in oncology",
+      "kind": "journal",
+      "published": "2026-09-23",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42831768": {
+      "key": "pmid:42831768",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42831768/",
+      "title": "Getting comfortable: clonal haematopoiesis creates a senescent niche for expansion.",
+      "journal": "Cancer research",
+      "kind": "journal",
+      "published": "2026-10-05",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42635039": {
+      "key": "pmid:42635039",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42635039/",
+      "title": "Clonal hematopoiesis of indeterminate potential (CHIP), vascular somatic mutation, and cardiovascular disease: A narrative review.",
+      "journal": "Vascular medicine (London, England)",
+      "kind": "journal",
+      "published": "2026-08-24",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42623673": {
+      "key": "pmid:42623673",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42623673/",
+      "title": "A comprehensive review of T-cell lymphoma following CAR T-cell immunotherapy.",
+      "journal": "Blood advances",
+      "kind": "journal",
+      "published": "2026-10-01",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "pmid:42660417": {
+      "key": "pmid:42660417",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42660417/",
+      "title": "Somatic genomic mosaicism in chronic kidney disease progression: A graded appraisal of renal epithelial injury, cellular senescence, and therapeutic implications.",
+      "journal": "Life sciences",
+      "kind": "journal",
+      "published": "2026-08-27",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "CHIP_mCA"
+      ]
+    },
+    "doi:10.20944/preprints202610.1342.v1": {
+      "key": "doi:10.20944/preprints202610.1342.v1",
+      "url": "https://doi.org/10.20944/preprints202610.1342.v1",
+      "title": "Biologically Inspired Selective Attention for Prostate MRI: A Segmentation-Guided Vision Transformer Framework for Computer-Aided Diagnosis",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42897017": {
+      "key": "pmid:42897017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897017/",
+      "title": "Neurovascular Coupling and Subclinical White Matter Alterations in Young Adults with Migraine without Aura: A Multimodal MRI and Machine Learning Study.",
+      "journal": "Academic radiology",
+      "kind": "journal",
+      "published": "2026-10-20",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "doi:10.64898/2026.10.16.759688": {
+      "key": "doi:10.64898/2026.10.16.759688",
+      "url": "https://doi.org/10.64898/2026.10.16.759688",
+      "title": "TiSAM: fusing spatial and histopathology foundation models for whole-slide image segmentation",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "biorxiv",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "doi:10.64898/2026.10.16.26365710": {
+      "key": "doi:10.64898/2026.10.16.26365710",
+      "url": "https://doi.org/10.64898/2026.10.16.26365710",
+      "title": "Deep Learning-Based Anatomical Level Classification of Craniofacial CT Slices: Comparison of CNN Architectures and Ensemble Methods",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "medrxiv",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42897082": {
+      "key": "pmid:42897082",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897082/",
+      "title": "Performance of artificial intelligence-based coronary CT angiography-derived fractional flow reserve across cohorts with different prevalence of obstructive coronary artery disease.",
+      "journal": "Journal of cardiovascular computed tomography",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.17.26365809": {
+      "key": "doi:10.64898/2026.10.17.26365809",
+      "url": "https://doi.org/10.64898/2026.10.17.26365809",
+      "title": "Clinical referral text overrides MRI evidence in multimodal large language models: glioma versus brain abscess",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "medrxiv",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42893439": {
+      "key": "pmid:42893439",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42893439/",
+      "title": "Foundation Model-Enabled Pathology-Informed MRI Model for Preoperative Prediction of Vessels Encapsulating Tumor Clusters in Resectable Hepatocellular Carcinoma: A Multicenter Retrospective Study.",
+      "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+      "kind": "journal",
+      "published": "2026-10-18",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-10116621/v1": {
+      "key": "doi:10.21203/rs.3.rs-10116621/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-10116621/v1",
+      "title": "Deep learning integrated clinical-radiomics model for prognostic prediction in locally advanced cervical cancer through 18 F-FDG PET/CT and MRI combination",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-18",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42894253": {
+      "key": "pmid:42894253",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42894253/",
+      "title": "Defining the Clinical Indication for Real-Time Artificial Intelligence-Assisted Ultrasound in Breast Lesions with Low Suspicion of Malignancy.",
+      "journal": "Journal of ultrasound in medicine : official journal of the American Institute of Ultrasound in Medicine",
+      "kind": "journal",
+      "published": "2026-10-18",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42892405": {
+      "key": "pmid:42892405",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42892405/",
+      "title": "Multicenter external validation of a multimodal MRI deep-learning model to predict meningioma bone invasion.",
+      "journal": "Magnetic resonance imaging",
+      "kind": "journal",
+      "published": "2026-10-17",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42858086": {
+      "key": "pmid:42858086",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42858086/",
+      "title": "Towards Explainable Artificial Intelligence in Medical Imaging: A Review of Perturbation and Backpropagation-Based Methods.",
+      "journal": "Journal of visualized experiments : JoVE",
+      "kind": "journal",
+      "published": "2026-10-09",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42891710": {
+      "key": "pmid:42891710",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42891710/",
+      "title": "Pediatric chronological age estimation from pelvic radiographs using deep learning: a multicenter retrospective study.",
+      "journal": "European radiology",
+      "kind": "journal",
+      "published": "2026-10-17",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42891756": {
+      "key": "pmid:42891756",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42891756/",
+      "title": "A deep neural network-enhanced multi-scale coupled model of patient-specific acoustic wave propagation for mechanotransduction stimulation of healthy and osteoarthritic knee articular cartilage.",
+      "journal": "Biomechanics and modeling in mechanobiology",
+      "kind": "journal",
+      "published": "2026-10-17",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42891626": {
+      "key": "pmid:42891626",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42891626/",
+      "title": "HeartFusion: A Cross-Modality Transformer for Accurate Cardiovascular Disease Diagnosis and Severity Assessment.",
+      "journal": "Journal of visualized experiments : JoVE",
+      "kind": "journal",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42888053": {
+      "key": "pmid:42888053",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42888053/",
+      "title": "Robustness of Nomogram Versus Deep Learning Models for Hepatocarcinoma Grading: Insights From a Bilateral Cross-Center Validation.",
+      "journal": "Ultrasound in medicine & biology",
+      "kind": "journal",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42888262": {
+      "key": "pmid:42888262",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42888262/",
+      "title": "Accuracy of general-purpose large language models (LLMS) in interpreting adolescent idiopathic scoliosis radiographs: a comparative study with experienced spine surgeons.",
+      "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
+      "kind": "journal",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42891603": {
+      "key": "pmid:42891603",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42891603/",
+      "title": "Machine Learning and Post-Hoc Feature Attribution for Predicting Cardiac MRI Motion Artifacts: A Retrospective Cohort Study.",
+      "journal": "Journal of visualized experiments : JoVE",
+      "kind": "journal",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42886459": {
+      "key": "pmid:42886459",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42886459/",
+      "title": "Large language model assistance for report-based carotid plaque AHA classification: a multi-reader study.",
+      "journal": "Insights into imaging",
+      "kind": "journal",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.14.26365516": {
+      "key": "doi:10.64898/2026.10.14.26365516",
+      "url": "https://doi.org/10.64898/2026.10.14.26365516",
+      "title": "Calibration, Uncertainty, and Data Efficiency of Deep Learning Chest Radiograph Classifiers Under Cross-Dataset Distribution Shift: A Multi-Dataset Benchmark",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-15",
+      "version_updated": "2026-10-15",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42460665": {
+      "key": "pmid:42460665",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42460665/",
+      "title": "Follicle identification in primate ovaries via machine learning†.",
+      "journal": "Biology of reproduction",
+      "kind": "journal",
+      "published": "2026-10-15",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42881254": {
+      "key": "pmid:42881254",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42881254/",
+      "title": "Deep learning-enabled assessment of right ventricular size and function is associated with cardiovascular outcomes.",
+      "journal": "Nature cardiovascular research",
+      "kind": "journal",
+      "published": "2026-10-15",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42881113": {
+      "key": "pmid:42881113",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42881113/",
+      "title": "Machine Learning Models Combining [68Ga]Ga-PSMA-11 PET Radiomics and Clinical Features to Predict Overall Survival for Metastatic Castration-resistant Prostate Cancer Treated with [177Lu]Lu-PSMA Radioligand Therapy.",
+      "journal": "European urology oncology",
+      "kind": "journal",
+      "published": "2026-10-15",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42880582": {
+      "key": "pmid:42880582",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42880582/",
+      "title": "Machine learning integrating high-resolution T1-weighted MR radiomics of subcortical structures with blood biomarkers to identify depressed patients with a history of suicide attempts.",
+      "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
+      "kind": "journal",
+      "published": "2026-10-15",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-10588615/v1": {
+      "key": "doi:10.21203/rs.3.rs-10588615/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-10588615/v1",
+      "title": "Machine-Learning Models Using Multidimensional Habitats MRI Features for Assessing Recurrence and Metastasis Risk in Locally Advanced Nasopharyngeal Carcinoma",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-10396270/v1": {
+      "key": "doi:10.21203/rs.3.rs-10396270/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-10396270/v1",
+      "title": "MRI-Based Radiomics and Machine Learning for Predicting Refractory Outcomes in Ménière’s Disease: A Multicenter Preliminary Study",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42869669": {
+      "key": "pmid:42869669",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42869669/",
+      "title": "Development and Prospective Validation of an Interpretable Machine Learning Model Integrating Cardiac MRI Extracellular Volume for 1-Year MACE Prediction Post-STEMI.",
+      "journal": "Academic radiology",
+      "kind": "journal",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.12.26364938": {
+      "key": "doi:10.64898/2026.10.12.26364938",
+      "url": "https://doi.org/10.64898/2026.10.12.26364938",
+      "title": "Multimodal Artificial Intelligence Fusion Models to Predict Response to Venetoclax and Azacitidine in Patients with Newly Diagnosed Acute Myeloid Leukemia",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": "2026-10-14",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-11030363/v1": {
+      "key": "doi:10.21203/rs.3.rs-11030363/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-11030363/v1",
+      "title": "Comparison of two- and three-dimensional computed tomography-based deep-learning models with neurosurgeon assessments for predicting functional outcome at discharge in patients with spontaneous intracerebral hemorrhage: a single-center retrospective study",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42870456": {
+      "key": "pmid:42870456",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42870456/",
+      "title": "A Real-World Clinical Study on Computed Tomography Pulmonary Angiography-Based Artificial Intelligence-Driven Risk Stratification in Pulmonary Embolism.",
+      "journal": "Journal of thoracic imaging",
+      "kind": "journal",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging"
+      ]
+    },
+    "pmid:42875362": {
+      "key": "pmid:42875362",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42875362/",
+      "title": "Deep Learning-Driven Multimodal Integration of Ultrasound and CT for Identifying Central Lymph Node Metastasis in Papillary Thyroid Carcinoma.",
+      "journal": "Ultrasound in medicine & biology",
+      "kind": "journal",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.09.757940": {
+      "key": "doi:10.64898/2026.10.09.757940",
+      "url": "https://doi.org/10.64898/2026.10.09.757940",
+      "title": "Deciphering Spatial Cellular Organization through RNA-Anchored Multi-Omics Deconvolution",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-15",
+      "version_updated": "2026-10-15",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.16.753149": {
+      "key": "doi:10.64898/2026.10.16.753149",
+      "url": "https://doi.org/10.64898/2026.10.16.753149",
+      "title": "Spatial epigenomics reveals ancestry-associated regulatory states linked to aggressive prostate cancer biology",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "biorxiv",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-11295356/v1": {
+      "key": "doi:10.21203/rs.3.rs-11295356/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-11295356/v1",
+      "title": "A Proteome-Wide, Accelerated Deep Learning Framework for Structural Interactome Docking, Polygenic Disease Network Translation and Automated Druggability Assessment",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-11191812/v1": {
+      "key": "doi:10.21203/rs.3.rs-11191812/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-11191812/v1",
+      "title": "GDIS-Bio framework for localizing transcriptional state transitions in single-cell trajectories",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42841740": {
+      "key": "pmid:42841740",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42841740/",
+      "title": "Serval: a modular framework for decoding imaging based spatial transcriptomics data.",
+      "journal": "Bioinformatics (Oxford, England)",
+      "kind": "journal",
+      "published": "2026-10-01",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.12.758524": {
+      "key": "doi:10.64898/2026.10.12.758524",
+      "url": "https://doi.org/10.64898/2026.10.12.758524",
+      "title": "In Vivo Transcriptomics-Based Framework for Systematic Indication Expansion",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": "2026-10-14",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42870190": {
+      "key": "pmid:42870190",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42870190/",
+      "title": "scDGCN: A Graph-Based Deep Clustering Framework for Single-Cell Transcriptomics via Neighborhood-Enhanced Context Representation Learning.",
+      "journal": "Interdisciplinary sciences, computational life sciences",
+      "kind": "journal",
+      "published": "2026-10-13",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.09.757882": {
+      "key": "doi:10.64898/2026.10.09.757882",
+      "url": "https://doi.org/10.64898/2026.10.09.757882",
+      "title": "STARgrid: an open-source pipeline from Visium HD sequencing reads to count matrices",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-12",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42892062": {
+      "key": "pmid:42892062",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42892062/",
+      "title": "vToxiNet: An interpretable deep learning framework for hepatotoxicity prediction and mechanism exploration.",
+      "journal": "Journal of hazardous materials",
+      "kind": "journal",
+      "published": "2026-10-12",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.10.757893": {
+      "key": "doi:10.64898/2026.10.10.757893",
+      "url": "https://doi.org/10.64898/2026.10.10.757893",
+      "title": "Systematic evaluation of transcript normalization methods and quantification pipelines across long-read sequencing platforms",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-15",
+      "version_updated": "2026-10-15",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42870689": {
+      "key": "pmid:42870689",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42870689/",
+      "title": "Inflammasome-Related Transcriptomic Profiles in Periodontitis and Peri-Implantitis Reveal a Shared Inflammatory Framework: A Cross-Sectional Study.",
+      "journal": "Clinical oral implants research",
+      "kind": "journal",
+      "published": "2026-10-14",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-11268522/v2": {
+      "key": "doi:10.21203/rs.3.rs-11268522/v2",
+      "url": "https://doi.org/10.21203/rs.3.rs-11268522/v2",
+      "title": "Cross-trait fine-mapping and sequence modeling prioritize an AHSG splicing mechanism at an otosclerosis locus",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-13",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.12.758413": {
+      "key": "doi:10.64898/2026.10.12.758413",
+      "url": "https://doi.org/10.64898/2026.10.12.758413",
+      "title": "Dog-human gene network colocalization links synaptic signalling and ubiquitination to compulsive disorders",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-12",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.07.756619": {
+      "key": "doi:10.64898/2026.10.07.756619",
+      "url": "https://doi.org/10.64898/2026.10.07.756619",
+      "title": "An iPSC-based experimental framework for investigating phenotypic variation associated with Jomon ancestry in the present-day Japanese population",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-11",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42860235": {
+      "key": "pmid:42860235",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42860235/",
+      "title": "Exploratory bone-brain transcriptomic associations and an ODE-based digital-twin framework for fracture healing.",
+      "journal": "Brain research",
+      "kind": "journal",
+      "published": "2026-10-11",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.12.758706": {
+      "key": "doi:10.64898/2026.10.12.758706",
+      "url": "https://doi.org/10.64898/2026.10.12.758706",
+      "title": "Auditing Confidence-Calibrated Benchmarking of Single-Cell Perturbation Models",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "biorxiv",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.05.756038": {
+      "key": "doi:10.64898/2026.10.05.756038",
+      "url": "https://doi.org/10.64898/2026.10.05.756038",
+      "title": "RiboFlow v2: a configurable ribosome profiling pipeline reveals measurements sensitive to read-mapping methodology",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-10",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42886762": {
+      "key": "pmid:42886762",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42886762/",
+      "title": "Computational deconvolution of drug sensitivity via single-cell-to-bulk transcriptome mapping.",
+      "journal": "PLoS computational biology",
+      "kind": "journal",
+      "published": "2026-10-16",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.15.759112": {
+      "key": "doi:10.64898/2026.10.15.759112",
+      "url": "https://doi.org/10.64898/2026.10.15.759112",
+      "title": "Navigating the rapidly evolving landscape of sequencing-based spatial transcriptomics technologies: a comprehensive multi-platform benchmark",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-16",
+      "version_updated": "2026-10-16",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:41980760": {
+      "key": "pmid:41980760",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41980760/",
+      "title": "Stromal biomarker-based framework for identifying pMMR/MSS and dMMR/MSI colorectal cancers with poor outcomes and limited benefit from immunotherapy.",
+      "journal": "Gut",
+      "kind": "journal",
+      "published": "2026-10-07",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications",
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.18.759996": {
+      "key": "doi:10.64898/2026.10.18.759996",
+      "url": "https://doi.org/10.64898/2026.10.18.759996",
+      "title": "U-Chrom: a unified framework for single-cell and spatial 3D genome data",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "biorxiv",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.03.756430": {
+      "key": "doi:10.64898/2026.10.03.756430",
+      "url": "https://doi.org/10.64898/2026.10.03.756430",
+      "title": "Systematic benchmark of demultiplexing workflows for direct RNA sequencing",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-10",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42893934": {
+      "key": "pmid:42893934",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42893934/",
+      "title": "Copper Metal-Organic Framework-Embedded Decellularized Matrix Hydrogel Remodels the Uterine Microenvironment for Endometrial Regeneration and Fertility Restoration.",
+      "journal": "Advanced healthcare materials",
+      "kind": "journal",
+      "published": "2026-10-18",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.02.756356": {
+      "key": "doi:10.64898/2026.10.02.756356",
+      "url": "https://doi.org/10.64898/2026.10.02.756356",
+      "title": "DECONVersation: Single Cell Foundation Model-Derived Embeddings for Robust Cell Type Deconvolution of Bulk RNA-seq",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-09",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42853794": {
+      "key": "pmid:42853794",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42853794/",
+      "title": "Benchmarking ensemble and deep learning models for drought-responsive gene prioritisation in rice using multi-omics data.",
+      "journal": "PloS one",
+      "kind": "journal",
+      "published": "2026-10-09",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42880231": {
+      "key": "pmid:42880231",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42880231/",
+      "title": "Comprehensive benchmarking of somatic mutation detection by the SMaHT Network.",
+      "journal": "Cell",
+      "kind": "journal",
+      "published": "2026-10-01",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "pmid:42771689": {
+      "key": "pmid:42771689",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42771689/",
+      "title": "OT-knn: A neighborhood-aware optimal transport framework for aligning spatial transcriptomics data.",
+      "journal": "PLoS computational biology",
+      "kind": "journal",
+      "published": "2026-09-22",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "doi:10.64898/2026.10.14.759042": {
+      "key": "doi:10.64898/2026.10.14.759042",
+      "url": "https://doi.org/10.64898/2026.10.14.759042",
+      "title": "scRIPT: a rapid, high-coverage single-cell lineage-tracing method applied to the hematoendothelial differentiation of embryonic stem cells",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-16",
+      "version_updated": "2026-10-16",
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "omics_methods_applications"
+      ]
+    },
+    "arxiv:2610.20512": {
+      "key": "arxiv:2610.20512",
+      "url": "https://arxiv.org/abs/2610.20512",
+      "title": "A Two-Level Clinical Novelty Prioritization Framework for Disease Trajectories Discovered from Longitudinal Electronic Health Records",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-14",
+      "version_updated": "2026-10-14",
+      "first_seen": "2026-10-20",
+      "source": "arxiv",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "doi:10.21203/rs.3.rs-11325895/v1": {
+      "key": "doi:10.21203/rs.3.rs-11325895/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-11325895/v1",
+      "title": "AXAI-MH: An Adaptive Context-Sensetive Explainable AI Framework for Personalized Mental Health Risk Assessment",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-13",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42893493": {
+      "key": "pmid:42893493",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42893493/",
+      "title": "Nationwide prevalence of high-risk human papillomavirus and cervical cytology findings in Chile: a registry-based study (2019-2024).",
+      "journal": "European journal of cancer prevention : the official journal of the European Cancer Prevention Organisation (ECP)",
+      "kind": "journal",
+      "published": "2026-10-20",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "doi:10.64898/2026.10.16.26365756": {
+      "key": "doi:10.64898/2026.10.16.26365756",
+      "url": "https://doi.org/10.64898/2026.10.16.26365756",
+      "title": "Biological aging measured from electronic health records is associated with recovery following cardiothoracic surgery",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "medrxiv",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42897215": {
+      "key": "pmid:42897215",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897215/",
+      "title": "Systemic disease burden among patients aged 40 years and over attending a UK dental hospital: a cross-sectional linked electronic health record study.",
+      "journal": "British dental journal",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42896154": {
+      "key": "pmid:42896154",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42896154/",
+      "title": "Psychosocial Distress and Radiation Treatment Interruptions in Patients With Cancer Using Machine Learning and Regression: Retrospective Cohort Study.",
+      "journal": "JMIR cancer",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895027": {
+      "key": "pmid:42895027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895027/",
+      "title": "Initial Direct Oral Anticoagulants Versus Warfarin After Cerebral Venous Thrombosis: A Target Trial Emulation.",
+      "journal": "Stroke",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895770": {
+      "key": "pmid:42895770",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895770/",
+      "title": "Greenspace visitation and risk of major adverse cardiovascular events: evidence from the Houston methodist cardiovascular learning health system registry.",
+      "journal": "European journal of preventive cardiology",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895470": {
+      "key": "pmid:42895470",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895470/",
+      "title": "Disease associations for rare immune genetic variants require statistical or rule-based support.",
+      "journal": "Journal of human immunity",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895976": {
+      "key": "pmid:42895976",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895976/",
+      "title": "Demographic and clinical factors associated with Syphilis treatment initiation in a tribal health system: a retrospective cohort study.",
+      "journal": "Sexually transmitted diseases",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42636871": {
+      "key": "pmid:42636871",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42636871/",
+      "title": "Prophylactic clip closure after right-colon endoscopic mucosal resection in a matched cohort of 470 patients exhibits subsite heterogeneity.",
+      "journal": "Endoscopy",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895347": {
+      "key": "pmid:42895347",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895347/",
+      "title": "Outcomes Related to the Use of Standard-Standard versus Standard-Offset Magnetically Controlled Growing Rods.",
+      "journal": "Journal of pediatric orthopedics",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42893614": {
+      "key": "pmid:42893614",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42893614/",
+      "title": "Real-world Evidence of Anifrolumab Use in Mexican Patients With Systemic Lupus Erythematosus: A Multicenter Observational Study.",
+      "journal": "Journal of clinical rheumatology : practical reports on rheumatic & musculoskeletal diseases",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "epmc",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895930": {
+      "key": "pmid:42895930",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895930/",
+      "title": "Psychiatric Comorbidities and Risks of Death, Non-Fatal Overdose, and Self-Harm in Opioid Agonist Therapy: A Retrospective Cohort Study.",
+      "journal": "European addiction research",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42894039": {
+      "key": "pmid:42894039",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42894039/",
+      "title": "A comprehensive analysis of the association of psychological profiling and sagittal balance parameters with neck pain in a non-deformity cervical spondylosis population: A prospective two-centers cross-sectional study.",
+      "journal": "Neurosurgical review",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42896742": {
+      "key": "pmid:42896742",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42896742/",
+      "title": "Heterogeneity in Time-Outcome Associations After Endovascular Thrombectomy: A Binational Registry Study.",
+      "journal": "Journal of stroke and cerebrovascular diseases : the official journal of National Stroke Association",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42896596": {
+      "key": "pmid:42896596",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42896596/",
+      "title": "Why Complete Pediatric Cancer Registration in Germany Requires Cross-Sector Reporting Obligations: A Registry Comparison Study.",
+      "journal": "Klinische Padiatrie",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895663": {
+      "key": "pmid:42895663",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895663/",
+      "title": "Association Between Albumin-Bilirubin Index and Clinical Outcomes in Septic Acute Kidney Injury Patients.",
+      "journal": "Journal of intensive care medicine",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895094": {
+      "key": "pmid:42895094",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895094/",
+      "title": "Neural correlates of self-directed violence: A large-sample resting-state fMRI study from UK Biobank.",
+      "journal": "Psychological medicine",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895566": {
+      "key": "pmid:42895566",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895566/",
+      "title": "Emergency surgery for blunt abdominal trauma in polytrauma - the impact of time to laparotomy on outcomes.",
+      "journal": "European journal of trauma and emergency surgery : official publication of the European Trauma Society",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895288": {
+      "key": "pmid:42895288",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895288/",
+      "title": "Colonoscopy screening outcomes in Lynch syndrome and differential colorectal cancer paths among MLH1/MSH2 carriers.",
+      "journal": "Journal of the National Cancer Institute",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895480": {
+      "key": "pmid:42895480",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895480/",
+      "title": "Gut microbiome-related plasma metabolites and risk of colorectal cancer.",
+      "journal": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42896626": {
+      "key": "pmid:42896626",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42896626/",
+      "title": "Favorable survival for older adults treated with Axi-cel and Tisa-cel CD19 CAR-T therapy for relapsed/refractory DLBCL: a U.S. multicenter comparative analysis.",
+      "journal": "Transplantation and cellular therapy",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895254": {
+      "key": "pmid:42895254",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895254/",
+      "title": "Large-scale plasma proteomic profiling enhances prediction of heart failure among hypertensive individuals: prospective insights from the UK Biobank.",
+      "journal": "Journal of global health",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "arxiv:2610.26604": {
+      "key": "arxiv:2610.26604",
+      "url": "https://arxiv.org/abs/2610.26604",
+      "title": "ITU-DESC: a missingness-aware machine-learning dementia risk score in the UK Biobank cohort",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "arxiv",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895621": {
+      "key": "pmid:42895621",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895621/",
+      "title": "Quantifying the Role of Stage-at-Diagnosis in Racial Disparities in US Cancer Survival: A Population-Based SEER Study for 8 Common Cancers.",
+      "journal": "Journal of racial and ethnic health disparities",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "arxiv:2610.25765": {
+      "key": "arxiv:2610.25765",
+      "url": "https://arxiv.org/abs/2610.25765",
+      "title": "TRACE: Tracking Multimodal Clinical Trajectories for Inpatient Risk Prediction",
+      "journal": "",
+      "kind": "preprint",
+      "published": "2026-10-19",
+      "version_updated": "2026-10-19",
+      "first_seen": "2026-10-20",
+      "source": "arxiv",
+      "tracks": [
+        "AI_medical_imaging",
+        "clinical_observational"
+      ]
+    },
+    "pmid:42896118": {
+      "key": "pmid:42896118",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42896118/",
+      "title": "Data-Driven Comorbidity Phenotypes and In-Hospital Outcomes Among Patients With Nonvariceal Upper Gastrointestinal Bleeding: Formative Retrospective Cohort Study.",
+      "journal": "JMIR formative research",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895274": {
+      "key": "pmid:42895274",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895274/",
+      "title": "Treatment patterns and outcomes in US patients with unresectable HCC treated with embolization.",
+      "journal": "Hepatic oncology",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    },
+    "pmid:42895545": {
+      "key": "pmid:42895545",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895545/",
+      "title": "Treatment selection and long-term survival in patients aged 50 to < 75 years undergoing valve reintervention for failed surgical aortic bioprostheses: insights from the Netherlands Heart Registration.",
+      "journal": "Clinical research in cardiology : official journal of the German Cardiac Society",
+      "kind": "journal",
+      "published": "2026-10-19",
+      "version_updated": null,
+      "first_seen": "2026-10-20",
+      "source": "pubmed",
+      "tracks": [
+        "clinical_observational"
+      ]
+    }
+  },
+  "tracks": {
+    "CHIP_mCA": {
+      "name": "CHIP / mCA",
+      "candidate_count": 445,
+      "readable_count": 19,
+      "reading": [
+        "pmid:42203206",
+        "doi:10.64898/2026.10.14.26365378",
+        "pmid:42886106",
+        "doi:10.64898/2026.10.10.26365222",
+        "pmid:42463292",
+        "pmid:42856605",
+        "pmid:42805147",
+        "pmid:42805460",
+        "pmid:42806144",
+        "pmid:42871440",
+        "pmid:42834788",
+        "pmid:42831067",
+        "pmid:42877550",
+        "pmid:42878086",
+        "pmid:42846836",
+        "pmid:42831768",
+        "pmid:42635039",
+        "pmid:42623673",
+        "pmid:42660417"
+      ],
+      "rankings": {
+        "pmid:42203206": {
+          "position": 1,
+          "score": 95.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "mCA / Y染色体嵌合"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.14.26365378": {
+          "position": 2,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42886106": {
+          "position": 3,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.10.26365222": {
+          "position": 4,
+          "score": 92.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42463292": {
+          "position": 5,
+          "score": 86.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 5.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42856605": {
+          "position": 6,
+          "score": 85.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 4.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42805147": {
+          "position": 7,
+          "score": 85.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 4.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42805460": {
+          "position": 8,
+          "score": 85.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 4.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42806144": {
+          "position": 9,
+          "score": 85.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 4.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42871440": {
+          "position": 10,
+          "score": 82.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 1.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42834788": {
+          "position": 11,
+          "score": 81.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 8.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42831067": {
+          "position": 12,
+          "score": 81,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42877550": {
+          "position": 13,
+          "score": 78.0,
+          "article_type": "综述 / 汇总",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 5.0,
+            "article_type_cues": 0,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42878086": {
+          "position": 14,
+          "score": 77.5,
+          "article_type": "评论 / 研究解读",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": -8,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42846836": {
+          "position": 15,
+          "score": 74.5,
+          "article_type": "综述 / 汇总",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 1.5,
+            "article_type_cues": 0,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42831768": {
+          "position": 16,
+          "score": 72.5,
+          "article_type": "评论 / 研究解读",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 7.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": -16.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42635039": {
+          "position": 17,
+          "score": 65,
+          "article_type": "综述 / 汇总",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 0,
+            "article_type_cues": 0,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42623673": {
+          "position": 18,
+          "score": 63.5,
+          "article_type": "综述 / 汇总",
+          "labels": [
+            "CHIP / 克隆性造血"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 40,
+            "publication_recency": 5.5,
+            "article_type_cues": 0,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42660417": {
+          "position": 19,
+          "score": 58,
+          "article_type": "综述 / 汇总",
+          "labels": [
+            "mCA / Y染色体嵌合"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 40,
+            "publication_recency": 0,
+            "article_type_cues": 0,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        }
+      },
+      "all_due_sources_complete": true
+    },
+    "AI_medical_imaging": {
+      "name": "AI 医学影像",
+      "candidate_count": 7574,
+      "readable_count": 1027,
+      "reading": [
+        "doi:10.20944/preprints202610.1342.v1",
+        "pmid:42897017",
+        "doi:10.64898/2026.10.16.759688",
+        "doi:10.64898/2026.10.16.26365710",
+        "pmid:42897082",
+        "doi:10.64898/2026.10.17.26365809",
+        "pmid:42893439",
+        "doi:10.21203/rs.3.rs-10116621/v1",
+        "pmid:42894253",
+        "pmid:42892405",
+        "pmid:42858086",
+        "pmid:42891710",
+        "pmid:42891756",
+        "pmid:42891626",
+        "pmid:42888053",
+        "pmid:42888262",
+        "pmid:42891603",
+        "pmid:42886459",
+        "doi:10.64898/2026.10.14.26365516",
+        "pmid:42460665",
+        "pmid:42881254",
+        "pmid:42881113",
+        "pmid:42880582",
+        "doi:10.21203/rs.3.rs-10588615/v1",
+        "doi:10.21203/rs.3.rs-10396270/v1",
+        "pmid:42869669",
+        "doi:10.64898/2026.10.12.26364938",
+        "doi:10.21203/rs.3.rs-11030363/v1",
+        "pmid:42870456",
+        "pmid:42875362"
+      ],
+      "rankings": {
+        "doi:10.20944/preprints202610.1342.v1": {
+          "position": 1,
+          "score": 97.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42897017": {
+          "position": 2,
+          "score": 96.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 15.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.16.759688": {
+          "position": 3,
+          "score": 95.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病理影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.16.26365710": {
+          "position": 4,
+          "score": 95.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42897082": {
+          "position": 5,
+          "score": 95.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.17.26365809": {
+          "position": 6,
+          "score": 95.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42893439": {
+          "position": 7,
+          "score": 95.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病理影像",
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-10116621/v1": {
+          "position": 8,
+          "score": 95.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42894253": {
+          "position": 9,
+          "score": 95.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42892405": {
+          "position": 10,
+          "score": 94.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42858086": {
+          "position": 11,
+          "score": 94.5,
+          "article_type": "综述 / 汇总",
+          "labels": [
+            "其他医学影像"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 9.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42891710": {
+          "position": 12,
+          "score": 94.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42891756": {
+          "position": 13,
+          "score": 94.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42891626": {
+          "position": 14,
+          "score": 94.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42888053": {
+          "position": 15,
+          "score": 94.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42888262": {
+          "position": 16,
+          "score": 94.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42891603": {
+          "position": 17,
+          "score": 94.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42886459": {
+          "position": 18,
+          "score": 94.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.14.26365516": {
+          "position": 19,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42460665": {
+          "position": 20,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病理影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42881254": {
+          "position": 21,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "其他医学影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42881113": {
+          "position": 22,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42880582": {
+          "position": 23,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-10588615/v1": {
+          "position": 24,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-10396270/v1": {
+          "position": 25,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42869669": {
+          "position": 26,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.12.26364938": {
+          "position": 27,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病理影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-11030363/v1": {
+          "position": 28,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42870456": {
+          "position": 29,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42875362": {
+          "position": 30,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "放射与超声影像"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        }
+      },
+      "all_due_sources_complete": true
+    },
+    "omics_methods_applications": {
+      "name": "组学方法与应用",
+      "candidate_count": 18917,
+      "readable_count": 4282,
+      "reading": [
+        "doi:10.64898/2026.10.09.757940",
+        "doi:10.64898/2026.10.16.753149",
+        "doi:10.21203/rs.3.rs-11295356/v1",
+        "doi:10.21203/rs.3.rs-11191812/v1",
+        "pmid:42841740",
+        "doi:10.64898/2026.10.12.758524",
+        "pmid:42870190",
+        "doi:10.64898/2026.10.09.757882",
+        "pmid:42892062",
+        "doi:10.64898/2026.10.10.757893",
+        "pmid:42870689",
+        "doi:10.21203/rs.3.rs-11268522/v2",
+        "doi:10.64898/2026.10.12.758413",
+        "doi:10.64898/2026.10.07.756619",
+        "pmid:42860235",
+        "doi:10.64898/2026.10.12.758706",
+        "doi:10.64898/2026.10.05.756038",
+        "pmid:42886762",
+        "doi:10.64898/2026.10.15.759112",
+        "pmid:41980760",
+        "doi:10.64898/2026.10.18.759996",
+        "doi:10.64898/2026.10.03.756430",
+        "pmid:42893934",
+        "doi:10.64898/2026.10.02.756356",
+        "pmid:42853794",
+        "pmid:42880231",
+        "pmid:42771689",
+        "doi:10.64898/2026.10.14.759042"
+      ],
+      "rankings": {
+        "doi:10.64898/2026.10.09.757940": {
+          "position": 1,
+          "score": 89.5,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "CUT&Tag / CUT&RUN",
+            "ATAC"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.16.753149": {
+          "position": 2,
+          "score": 80.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "ATAC"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 40,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-11295356/v1": {
+          "position": 3,
+          "score": 98.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "GWAS"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-11191812/v1": {
+          "position": 4,
+          "score": 97.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42841740": {
+          "position": 5,
+          "score": 90.5,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "空间组学"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 5.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.12.758524": {
+          "position": 6,
+          "score": 97.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42870190": {
+          "position": 7,
+          "score": 96.5,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.09.757882": {
+          "position": 8,
+          "score": 96.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42892062": {
+          "position": 9,
+          "score": 96.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.10.757893": {
+          "position": 10,
+          "score": 93.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42870689": {
+          "position": 11,
+          "score": 93.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-11268522/v2": {
+          "position": 12,
+          "score": 92.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "GWAS"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.12.758413": {
+          "position": 13,
+          "score": 92.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "GWAS"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.07.756619": {
+          "position": 14,
+          "score": 91.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 10.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42860235": {
+          "position": 15,
+          "score": 91.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 10.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.12.758706": {
+          "position": 16,
+          "score": 91.5,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "单细胞 / 单核"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.05.756038": {
+          "position": 17,
+          "score": 91.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 10.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42886762": {
+          "position": 18,
+          "score": 90.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.15.759112": {
+          "position": 19,
+          "score": 90.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "空间组学"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:41980760": {
+          "position": 20,
+          "score": 89.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 8.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.18.759996": {
+          "position": 21,
+          "score": 87.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "单细胞 / 单核"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.03.756430": {
+          "position": 22,
+          "score": 87.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 10.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42893934": {
+          "position": 23,
+          "score": 87.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.02.756356": {
+          "position": 24,
+          "score": 86.5,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 9.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42853794": {
+          "position": 25,
+          "score": 86.5,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 9.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42880231": {
+          "position": 26,
+          "score": 86.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "单细胞 / 单核"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 5.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42771689": {
+          "position": 27,
+          "score": 86.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "RNA / 转录组",
+            "空间组学"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 1.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 8
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.14.759042": {
+          "position": 28,
+          "score": 86.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "RNA / 转录组",
+            "单细胞 / 单核"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 13.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 0
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        }
+      },
+      "all_due_sources_complete": true
+    },
+    "clinical_observational": {
+      "name": "病案与临床数据研究",
+      "candidate_count": 16842,
+      "readable_count": 8679,
+      "reading": [
+        "arxiv:2610.20512",
+        "doi:10.21203/rs.3.rs-11325895/v1",
+        "pmid:42893493",
+        "doi:10.64898/2026.10.16.26365756",
+        "pmid:42897215",
+        "pmid:42896154",
+        "pmid:42895027",
+        "pmid:42895770",
+        "pmid:42895470",
+        "pmid:42895976",
+        "pmid:42636871",
+        "pmid:42895347",
+        "pmid:42893614",
+        "pmid:42895930",
+        "pmid:42894039",
+        "pmid:42896742",
+        "pmid:42896596",
+        "pmid:42895663",
+        "pmid:42895094",
+        "pmid:42895566",
+        "pmid:42895288",
+        "pmid:42895480",
+        "pmid:42896626",
+        "pmid:42895254",
+        "arxiv:2610.26604",
+        "pmid:42895621",
+        "arxiv:2610.25765",
+        "pmid:42896118",
+        "pmid:42895274",
+        "pmid:42895545"
+      ],
+      "rankings": {
+        "arxiv:2610.20512": {
+          "position": 1,
+          "score": 107.0,
+          "article_type": "方法 / 评测候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 12.0,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.21203/rs.3.rs-11325895/v1": {
+          "position": 2,
+          "score": 106.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测",
+            "人群风险与关联"
+          ],
+          "method_cue": true,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 11.5,
+            "article_type_cues": 12,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42893493": {
+          "position": 3,
+          "score": 106.0,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 15.0,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "doi:10.64898/2026.10.16.26365756": {
+          "position": 4,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42897215": {
+          "position": 5,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42896154": {
+          "position": 6,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895027": {
+          "position": 7,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "治疗效果比较"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18,
+            "abstract_review_adjustment": 0.0
+          },
+          "abstract_classification_checked": true,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895770": {
+          "position": 8,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895470": {
+          "position": 9,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895976": {
+          "position": 10,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42636871": {
+          "position": 11,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "治疗效果比较"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895347": {
+          "position": 12,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42893614": {
+          "position": 13,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895930": {
+          "position": 14,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42894039": {
+          "position": 15,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42896742": {
+          "position": 16,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42896596": {
+          "position": 17,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895663": {
+          "position": 18,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895094": {
+          "position": 19,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895566": {
+          "position": 20,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895288": {
+          "position": 21,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895480": {
+          "position": 22,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42896626": {
+          "position": 23,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895254": {
+          "position": 24,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "arxiv:2610.26604": {
+          "position": 25,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895621": {
+          "position": 26,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "arxiv:2610.25765": {
+          "position": 27,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42896118": {
+          "position": 28,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "人群风险与关联"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895274": {
+          "position": 29,
+          "score": 105.5,
+          "article_type": "应用 / 原始研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        },
+        "pmid:42895545": {
+          "position": 30,
+          "score": 105.5,
+          "article_type": "临床预测研究候选",
+          "labels": [
+            "病案 / 登记 / 数据库",
+            "临床预测"
+          ],
+          "method_cue": false,
+          "score_components": {
+            "topic_relevance": 55,
+            "publication_recency": 14.5,
+            "article_type_cues": 8,
+            "metadata_availability": 10,
+            "application_priority": 18
+          },
+          "abstract_classification_checked": false,
+          "full_text_quality_reviewed": false
+        }
+      },
+      "all_due_sources_complete": false
+    }
+  },
+  "public_screening": {
+    "excluded_reading_entries": 1,
+    "version_entries_merged": 1,
+    "description": "公开清单另排除已核实的词义误命中，并按已核实的来源版本关系合并重复展示。后台候选统计保留原口径。"
+  },
+  "highlights_as_of": "2026-10-20T18:49:38.345019+08:00",
+  "highlights": [
+    {
+      "key": "pmid:42203206",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42203206/",
+      "track": "CHIP_mCA",
+      "title": "Association of haematopoietic mosaic loss of chromosome Y with dermatitis and eczema risk: an analysis in a large-scale prospective cohort study.",
+      "short_title_zh": "mLOY 与皮炎、湿疹发生风险",
+      "summary_zh": "UK Biobank前瞻性队列，关注血液细胞Y染色体嵌合缺失与疾病发生的关联。适合同时观察第一和第四方向的交叉收录。",
+      "published": "2026-10-19",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42886106",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42886106/",
+      "track": "CHIP_mCA",
+      "title": "Association of Life's Essential 8 With Clonal Hematopoiesis and Coronary Artery Disease.",
+      "short_title_zh": "Life’s Essential 8、CHIP 与冠心病",
+      "summary_zh": "基于UK Biobank，分析心血管健康指标、克隆性造血及冠心病随访结局；也是“明确数据库但未写cohort词”漏检修正的实例。",
+      "published": "2026-10-15",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42893439",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42893439/",
+      "track": "AI_medical_imaging",
+      "title": "Foundation Model-Enabled Pathology-Informed MRI Model for Preoperative Prediction of Vessels Encapsulating Tumor Clusters in Resectable Hepatocellular Carcinoma: A Multicenter Retrospective Study.",
+      "short_title_zh": "病理信息辅助的肝癌 MRI 基础模型",
+      "summary_zh": "多中心回顾性研究；开发阶段使用配对病理与MRI，实际推理仅需术前MRI，并报告多个外部验证队列。",
+      "published": "2026-10-18",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42897017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897017/",
+      "track": "AI_medical_imaging",
+      "title": "Neurovascular Coupling and Subclinical White Matter Alterations in Young Adults with Migraine without Aura: A Multimodal MRI and Machine Learning Study.",
+      "short_title_zh": "偏头痛的多模态 MRI 与机器学习",
+      "summary_zh": "人群横断面影像分析，结合白质指标、神经血管耦合及机器学习；摘要明确仍需纵向和独立验证。",
+      "published": "2026-10-20",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42870190",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42870190/",
+      "track": "omics_methods_applications",
+      "title": "scDGCN: A Graph-Based Deep Clustering Framework for Single-Cell Transcriptomics via Neighborhood-Enhanced Context Representation Learning.",
+      "short_title_zh": "scDGCN 单细胞聚类方法",
+      "summary_zh": "将图去噪、邻域表达重建和图神经网络结合，用于无监督单细胞亚群识别；属于方法评测线。",
+      "published": "2026-10-13",
+      "article_type": "方法 / 评测候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42894387",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42894387/",
+      "track": "omics_methods_applications",
+      "title": "Systematic benchmarking of multi-ancestry fine-mapping under variant heterogeneity and LD mismatch.",
+      "short_title_zh": "多祖源 GWAS 精细定位方法评测",
+      "summary_zh": "比较多种精细定位方法在祖源差异、变异缺失和LD不匹配下的表现。源发表日期为2026-09-01，保留为本轮发现的较早方法文章。",
+      "published": "2026-09-01",
+      "article_type": "方法 / 评测候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42879280",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42879280/",
+      "track": "omics_methods_applications",
+      "title": "Histone H3K27 methylation states are sequentially catalyzed in cycling cells.",
+      "short_title_zh": "CUT&Tag 研究 H3K27 甲基化复制动力学",
+      "summary_zh": "使用CUT&Tag在人细胞中追踪DNA复制后的组蛋白甲基化状态，展示该技术用于机制问题的应用。",
+      "published": "2026-10-15",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42894010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42894010/",
+      "track": "omics_methods_applications",
+      "title": "Endothelial exosomes remodel chromatin accessibility and superenhancer in cancer cells to promote liver metastatic colonization.",
+      "short_title_zh": "ATAC-seq 研究肿瘤肝转移定植",
+      "summary_zh": "联合ATAC-seq、ChIP-seq与机制实验研究内皮外泌体、染色质可及性及超级增强子；归入组学应用线。",
+      "published": "2026-10-19",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42893493",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42893493/",
+      "track": "clinical_observational",
+      "title": "Nationwide prevalence of high-risk human papillomavirus and cervical cytology findings in Chile: a registry-based study (2019-2024).",
+      "short_title_zh": "全国 HPV 与宫颈细胞学筛查登记分析",
+      "summary_zh": "利用智利全国筛查汇总数据作描述性研究；数据单位含检测样本，不能把检测数量当作独立受试者人数。",
+      "published": "2026-10-20",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42897215",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897215/",
+      "track": "clinical_observational",
+      "title": "Systemic disease burden among patients aged 40 years and over attending a UK dental hospital: a cross-sectional linked electronic health record study.",
+      "short_title_zh": "牙科病案与电子病历关联研究",
+      "summary_zh": "链接牙科病案和二级医疗EHR，研究就诊人群的系统性疾病负担；属于横断面临床数据研究。",
+      "published": "2026-10-19",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    },
+    {
+      "key": "pmid:42895027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895027/",
+      "track": "clinical_observational",
+      "title": "Initial Direct Oral Anticoagulants Versus Warfarin After Cerebral Venous Thrombosis: A Target Trial Emulation.",
+      "short_title_zh": "登记数据中的目标试验模拟",
+      "summary_zh": "使用多中心脑静脉血栓登记数据比较初始口服抗凝方案；属于观察性治疗比较，研究设计与随机试验需区分。",
+      "published": "2026-10-19",
+      "article_type": "应用 / 原始研究候选",
+      "abstract_classification_checked": true,
+      "full_text_quality_reviewed": false
+    }
+  ],
+  "ranking_description": "方向内阅读优先级由主题相关性、发表日期、文章类型线索、元数据完整度和应用场景共同生成。组学清单兼顾不同技术。分数不代表研究质量，也不用于跨方向比较。",
+  "update_description": "页面展示独立后台生成的公开阅读清单快照。自动检索仍在独立后台运行，需要运行环境在线；网页以显示的实际数据时间为准。未完成来源不视为零结果。"
+}

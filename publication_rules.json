@@ -1,0 +1,24 @@
+{
+  "version": "2026-10-20-publication-review-v1",
+  "exclusions": [
+    {
+      "track": "omics_methods_applications",
+      "key": "arxiv:2610.18837",
+      "reason": "Numerical-analysis paper; single cell refers to a computational grid cell, not biological single-cell omics.",
+      "evidence_url": "https://arxiv.org/abs/2610.18837"
+    }
+  ],
+  "version_groups": [
+    {
+      "canonical": "doi:10.21203/rs.3.rs-11268522/v2",
+      "aliases": ["doi:10.21203/rs.3.rs-11268522/v1"],
+      "reason": "Crossref explicitly registers the two DOIs as versions of each other. Retain the checked v2 display and its original URL.",
+      "relation": "is-version-of",
+      "checked_at": "2026-10-20",
+      "evidence_urls": [
+        "https://api.crossref.org/works/10.21203/rs.3.rs-11268522/v1",
+        "https://api.crossref.org/works/10.21203/rs.3.rs-11268522/v2"
+      ]
+    }
+  ]
+}
