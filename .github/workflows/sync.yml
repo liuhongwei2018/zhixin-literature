@@ -1,0 +1,77 @@
+name: Sync literature and publish HOT
+
+on:
+  schedule:
+    - cron: '17 0,12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '*.py'
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - '*.svg'
+      - 'queries.json'
+      - 'publication_rules.json'
+      - 'requirements.txt'
+      - '.github/workflows/sync.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: zhixin-sync-publish
+  cancel-in-progress: false
+
+jobs:
+  sync-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out public project
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install API dependency
+        run: python -m pip install -r requirements.txt
+      - name: Test failure boundaries and public export
+        run: python -m unittest -v test_cloud test_export_public
+      - name: Synchronize sources and compute personal HOT
+        id: scan
+        continue-on-error: true
+        run: python sync.py --budget-seconds 3300
+      - name: Validate public data before publication
+        run: python sync.py --validate
+      - name: Persist only public catalogue and recovery checkpoints
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- catalog.json scan_state.json readings.json weekly.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update literature catalogue and personal HOT [skip ci]'
+            git push
+          fi
+      - name: Build allowlisted static site
+        run: python sync.py --build-site site
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload public site only
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report incomplete source windows after publishing their status
+        if: steps.scan.outcome != 'success'
+        run: |
+          echo 'Some source windows remain incomplete. The site shows coverage; checkpoints retain gaps for the next run.'
+          exit 1
