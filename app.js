@@ -5,6 +5,7 @@ let data, selected = "all", saved = new Set();
 try { saved = new Set(JSON.parse(localStorage.getItem("zhixin-saved-v1") || "[]")); } catch (_) {}
 const sourceNames = {pubmed:"PubMed", epmc:"Europe PMC", biorxiv:"bioRxiv", medrxiv:"medRxiv", arxiv:"arXiv", other:"公开来源"};
 const parts = {topic_relevance:"主题", publication_recency:"日期", article_type_cues:"类型", metadata_availability:"元数据", application_priority:"应用", abstract_review_adjustment:"摘要核对调整"};
+const hotParts = {relevance:"相关性 /40",recency:"新近性 /30",design_method:"设计与方法线索 /20",metadata:"元数据 /10"};
 const stateNames = {complete:"已完成", failed:"待重试", running:"检索中", pending:"等待执行"};
 
 function safeLink(url) {
@@ -20,7 +21,7 @@ function toggleSave(key, button) {
   if ($("type").value === "saved") render();
 }
 function article(p, r, direction) {
-  const item = el("article", "paper"); item.append(el("span", "position", String(r.position).padStart(2,"0")));
+  const item = el("article", "paper"); item.append(el("span", "position", String($("sort").value === "hot" ? r.hot_position : r.position).padStart(2,"0")));
   const body = el("div", "paper-main"), meta = el("div", "meta");
   meta.append(el("span", "tag" + (p.kind === "preprint" ? " preprint" : ""), p.kind === "preprint" ? "预印本 · 未经同行评审" : "期刊文献"));
   meta.append(el("span", "", p.published || "发表日期待核"));
@@ -35,9 +36,14 @@ function article(p, r, direction) {
   if (p.tracks.length > 1) chips.append(el("span", "", "跨方向收录"));
   if (p.version_updated && p.version_updated !== p.published) chips.append(el("span", "", "版本更新 " + p.version_updated));
   body.append(chips);
-  const detail = el("details", "rank-detail"); detail.append(el("summary", "", "阅读优先级 " + r.score + " · 查看依据"));
-  detail.append(el("p", "", Object.entries(r.score_components || {}).map(([k,v]) => (parts[k] || k) + " " + v).join(" · ")));
-  detail.append(el("p", "", "按" + direction + "方向内排序。分数为规则生成的阅读线索，尚未经全文质量评价。")); body.append(detail);
+  const detail = el("details", "rank-detail"); detail.append(el("summary", "", "个人 HOT " + r.hot.score + " · 查看依据"));
+  detail.append(el("p", "", Object.entries(r.hot.components || {}).map(([k,v]) => (hotParts[k] || k) + "：" + v).join(" · ")));
+  const a = r.hot.attention, g = a.growth;
+  let attention = a.status === "ok" ? "Europe PMC 被引 " + a.value + " 次；采集于 " + dated(a.observed_at) : a.status === "stale" ? "引文记录已过期，本轮不参与辅助排序。" : "引文暂不可用，不按零次处理。";
+  attention += g.status === "ok" ? " 两次采集间隔 " + g.actual_hours + " 小时，来源计数增加 " + g.delta + "；按日折算 " + g.per_day + "。" : g.status === "counter_correction" ? " 来源计数回调，本轮不计算增长。" : " 尚无两次间隔至少 12 小时的有效记录，增长率留空。";
+  detail.append(el("p", "", attention));
+  detail.append(el("p", "", "按" + direction + "方向内排序。设计与方法为题录和摘要线索，尚未经全文质量评价；HOT 是个人阅读优先级。"));
+  if (r.hot.recent_version) detail.append(el("p", "", "较早预印本的近期版本更新，不作为全新论文。")); body.append(detail);
   item.append(body);
   const button = el("button", "save" + (saved.has(p.key) ? " saved" : ""), saved.has(p.key) ? "★" : "☆"); button.type = "button"; button.setAttribute("aria-label", saved.has(p.key) ? "取消收藏" : "收藏文章"); button.setAttribute("aria-pressed", String(saved.has(p.key))); button.addEventListener("click", () => toggleSave(p.key, button)); item.append(button);
   return item;
@@ -55,8 +61,9 @@ function render() {
       return !q || [p.title,p.journal,r.article_type,...r.labels,note?.short_title_zh,note?.summary_zh].filter(Boolean).join(" ").toLocaleLowerCase().includes(q);
     });
     if ($("sort").value === "date") rows.sort((a,b) => (b.p.published || "").localeCompare(a.p.published || "") || a.r.position-b.r.position);
+    if ($("sort").value === "reading") rows.sort((a,b) => a.r.position-b.r.position);
     if (!rows.length) continue;
-    const section = el("section", "track-section"), h = el("h3", "track-heading"); h.append(el("span", "", t.name), el("small", "", "候选 " + t.candidate_count.toLocaleString() + " · 核心阅读候选 " + t.readable_count.toLocaleString())); section.append(h);
+    const section = el("section", "track-section"), h = el("h3", "track-heading"); h.append(el("span", "", t.name), el("small", "", "目录候选 " + t.candidate_count.toLocaleString() + " · HOT 合格候选 " + t.readable_count.toLocaleString())); section.append(h);
     for (const row of rows) { section.append(article(row.p,row.r,t.name)); count++; unique.add(row.p.key); }
     fragment.append(section);
   }
@@ -74,13 +81,13 @@ function nav() {
 async function init() {
   try {
     const response = await fetch("readings.json", {cache:"no-store"}); if (!response.ok) throw new Error("readings unavailable"); data = await response.json();
-    if (data.schema_version !== 1 || !data.tracks || !data.papers || data.formal_hot_enabled || data.push_enabled) throw new Error("unsupported public reading data");
+    if (data.schema_version !== 2 || !data.tracks || !data.papers || !data.formal_hot_enabled || data.push_enabled) throw new Error("unsupported public reading data");
     $("paper-count").textContent = data.displayed_unique_papers + " 篇";
     $("coverage-count").textContent = data.coverage.complete + " / " + data.coverage.total;
     $("updated").textContent = dated(data.source_as_of);
     const age = Date.now()-new Date(data.source_as_of).getTime(), stale = age > 36*3600*1000;
     $("notice").classList.toggle("ok",data.all_due_sources_complete && !stale);
-    $("notice").textContent = (stale ? "这份清单已超过 36 小时未更新。" : "") + (data.all_due_sources_complete ? "本轮检索窗口已完成。" : "本轮仍有 " + (data.coverage.total-data.coverage.complete) + " 个检索任务未完成，清单持续补全。") + " 当前显示公开阅读清单快照，正式 HOT 尚未启用。";
+    $("notice").textContent = (stale ? "这份清单已超过 36 小时未更新。" : "") + (data.cloud_scanner_enabled ? "云端自动同步已接通，每 12 小时运行。" : "云端首次同步待验证。") + (data.all_due_sources_complete ? " 本轮 22 个来源任务已完成。" : " 本轮 " + data.coverage.complete + "/22 个来源任务完成；未完成窗口保留补扫，不代表没有新文献。") + " 个人 HOT 试运行 · 文献推送关闭。";
     $("ranking-description").textContent = data.ranking_description; $("update-description").textContent = data.update_description;
     const screening = data.public_screening;
     $("screening-description").textContent = screening ? screening.description + " 本次排除 " + screening.excluded_reading_entries + " 条已核实误命中，合并 " + screening.version_entries_merged + " 条旧版本重复展示。" : "";

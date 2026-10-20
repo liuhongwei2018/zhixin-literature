@@ -6,7 +6,7 @@
   <meta name="description" content="知新个人文献阅读清单，追踪 CHIP/mCA、AI 医学影像、组学方法与临床数据研究。">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <title>知新 · 文献阅读清单</title>
+  <title>知新 · 个人文献 HOT</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
@@ -18,7 +18,7 @@
       <a class="brand" href="./"><span class="brandmark">知</span><span>知新<small>个人文献雷达</small></span></a>
       <div class="nav-label">研究方向</div>
       <nav id="topics" aria-label="研究方向"></nav>
-      <div class="aside-note"><span class="status-dot"></span> 独立后台试运行<p>每日扫描 · 周一汇总<br>阅读排序持续校准</p></div>
+      <div class="aside-note"><span class="status-dot"></span> 云端独立试运行<p>每 12 小时同步<br>个人 HOT · 周一回扫</p></div>
       <a class="repo" href="https://github.com/liuhongwei2018/zhixin-literature" target="_blank" rel="noopener noreferrer">项目与检索说明 ↗</a>
     </aside>
     <main>
@@ -28,13 +28,13 @@
       <section class="toolbar" aria-label="筛选阅读清单">
         <label class="search"><span class="sr-only">搜索标题、标签或中文导读</span><input id="search" type="search" placeholder="搜索标题、标签或中文导读" autocomplete="off"></label>
         <label><span class="sr-only">文章类型</span><select id="type"><option value="all">全部类型</option><option value="method">方法与评测</option><option value="application">应用与研究</option><option value="reviewed">摘要已核对</option><option value="saved">已收藏</option></select></label>
-        <label><span class="sr-only">排序方式</span><select id="sort"><option value="reading">阅读顺序</option><option value="date">发表日期</option></select></label>
+        <label><span class="sr-only">排序方式</span><select id="sort"><option value="hot">个人 HOT</option><option value="reading">基础阅读顺序</option><option value="date">发表日期</option></select></label>
         <label class="toggle"><input type="checkbox" id="preprints" checked>含预印本</label>
       </section>
       <div class="list-heading"><h2 id="heading">阅读清单</h2><span id="result-count" aria-live="polite"></span></div>
       <div id="list" tabindex="-1"></div>
-      <details id="coverage-detail"><summary>查看检索覆盖与排序依据</summary><p id="ranking-description"></p><p id="screening-description"></p><p>四个方向分别排序，同一篇文章可以属于多个方向。预印本单独标记；新收录时间与原始发表时间分开。分数是阅读线索，未经全文质量评价；正式 HOT 和文献推送均未开启。</p><div class="table-wrap"><table><thead><tr><th>方向</th><th>来源</th><th>检索窗口</th><th>状态</th></tr></thead><tbody id="coverage-rows"></tbody></table></div></details>
-      <footer><p id="update-description"></p><p>计划每日 08:00 扫描，周一汇总（Asia/Shanghai）。当前网页为公开清单镜像，检索环境仍需在线。收藏仅保存在本浏览器。题名及元数据归原来源所有，点击题名查看原文。</p></footer>
+      <details id="coverage-detail"><summary>查看检索覆盖与 HOT 依据</summary><p id="ranking-description"></p><p id="screening-description"></p><p>四个方向分别排序，同一篇文章可以属于多个方向。每个方向展示前 100 条，组学补充缺少的子方向代表。预印本单独标记；新收录时间与原始发表时间分开。来源任务完成表示已核对分页数量，不代表科学意义上的零漏检；关键词和分类规则持续校准。</p><div class="table-wrap"><table><thead><tr><th>方向</th><th>来源</th><th>检索窗口</th><th>状态</th></tr></thead><tbody id="coverage-rows"></tbody></table></div></details>
+      <footer><p id="update-description"></p><p>可查看 <a href="https://github.com/liuhongwei2018/zhixin-literature/actions" target="_blank" rel="noopener noreferrer">云端运行记录 ↗</a>。收藏仅保存在本浏览器。题名及元数据归原来源所有，点击题名查看原文。</p></footer>
     </main>
   </div>
   <noscript>请启用 JavaScript 读取文献清单，也可以直接查看 <a href="readings.json">公开文献元数据</a>。</noscript>
