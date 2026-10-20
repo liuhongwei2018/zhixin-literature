@@ -4,7 +4,7 @@ import json
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlencode
 import requests
 import metadata
 import retrieval
@@ -41,6 +41,7 @@ class Client:
         host = urlparse(url).hostname
         if urlparse(url).scheme != "https" or host not in HOSTS:
             raise SourceFailure("unapproved_source_host")
+        use_post = bool(host == "eutils.ncbi.nlm.nih.gov" and params and len(urlencode(params)) > 1500)
         for attempt in range(3):
             self.check_budget()
             cooldown = self.state["cooldowns"].get(host, 0)
@@ -51,9 +52,8 @@ class Client:
             self.last[host] = self.clock()
             self.requests += 1
             try:
-                response = self.session.get(url, params=params, timeout=(12, 35),
-                    headers={"User-Agent": "ZhixinLiterature/1.0 (+https://github.com/liuhongwei2018/zhixin-literature)"},
-                    allow_redirects=False)
+                options = {"timeout": (12, 35), "headers": {"User-Agent": "ZhixinLiterature/1.0 (+https://github.com/liuhongwei2018/zhixin-literature)"}, "allow_redirects": False}
+                response = self.session.post(url, data=params, **options) if use_post else self.session.get(url, params=params, **options)
             except requests.RequestException:
                 if attempt == 2: raise SourceFailure("network_timeout_or_connection", host)
                 self.sleep(2**(attempt+1)); continue
@@ -69,6 +69,10 @@ class Client:
                 raise SourceFailure("http_429", host)
             if response.status_code >= 500 and attempt < 2:
                 self.sleep(2**(attempt+1)); continue
+            if response.status_code == 400 and host == "eutils.ncbi.nlm.nih.gov" and attempt < 2:
+                # E-Utilities supports form POST for long queries / UID batches.
+                # Keep malformed requests bounded; do not retry rate-limit responses here.
+                use_post = True; self.sleep(2**(attempt+1)); continue
             if response.status_code != 200:
                 raise SourceFailure("http_"+str(response.status_code), host)
             if len(response.content) > 24_000_000:
@@ -95,9 +99,16 @@ def pubmed(client, profile, lane, start, end, cache):
 
 def epmc(client, profile, lane, start, end, cache):
     field = "FIRST_IDATE" if lane == "new" else "UPDATE_DATE"
-    meta, rows = retrieval.epmc_range(profile["queries"]["epmc"], start, end,
-        date_field=field, scope=profile["key"], cache_dir=cache,
-        request=lambda p: client.get("https://www.ebi.ac.uk/europepmc/webservices/rest/search", p), hard_max=100000)
+    request=lambda p: client.get("https://www.ebi.ac.uk/europepmc/webservices/rest/search", p)
+    if profile["key"]=="clinical_observational" and lane=="updates":
+        meta,rows=retrieval.epmc_partitioned(profile["queries"]["epmc"],start,end,date_field=field,request=request)
+    else:
+        try:
+            meta, rows = retrieval.epmc_range(profile["queries"]["epmc"], start, end,
+                date_field=field, scope=profile["key"], cache_dir=cache,request=request, hard_max=100000)
+        except retrieval.IncompleteSearch as error:
+            if error.details["reason"] not in {"duplicate_or_excess_records","cursor_cycle","pagination_ended_early","count_changed"}:raise
+            meta,rows=retrieval.epmc_partitioned(profile["queries"]["epmc"],start,end,date_field=field,request=request)
     return [metadata.epmc_row(row) for row in rows], {"expected": meta["count"], "received": len(rows), "date_field": field, "contract": retrieval.SEARCH_CONTRACT}
 
 

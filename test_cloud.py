@@ -89,6 +89,21 @@ class RetrievalIntegrity(unittest.TestCase):
                     retrieval.epmc_range("x","2026-10-19","2026-10-19",date_field="FIRST_IDATE",scope="x",cache_dir=Path(temp),
                         request=lambda p:{"hitCount":2,"resultList":{"result":records}},hard_max=100000)
 
+    def test_epmc_partition_union_includes_undated_records(self):
+        import re
+        rows=[{"source":"MED","id":str(i),"firstPublicationDate":d}for i,d in enumerate(["1900-01-01","2026-10-18","2026-10-19",None])]
+        def request(params):
+            q=params["query"];matched=rows
+            if "NOT FIRST_PDATE:[* TO *]" in q:matched=[r for r in rows if r["firstPublicationDate"] is None]
+            elif "FIRST_PDATE:[* TO *]" in q:matched=[r for r in rows if r["firstPublicationDate"]]
+            else:
+                interval=re.search(r"FIRST_PDATE:\[([0-9-]+) TO ([0-9-]+)\]",q)
+                if interval:matched=[r for r in rows if r["firstPublicationDate"] and interval[1]<=r["firstPublicationDate"]<=interval[2]]
+            return {"hitCount":len(matched),"resultList":{"result":matched[:params["pageSize"]]}}
+        meta,found=retrieval.epmc_partitioned("x","2026-10-19","2026-10-19",date_field="UPDATE_DATE",request=request,page_limit=2)
+        self.assertEqual(meta["count"],4)
+        self.assertEqual({r["id"]for r in found},{"0","1","2","3"})
+
     def test_pubmed_fetch_checks_exact_ids_and_supports_books(self):
         xml='<PubmedArticleSet><PubmedBookArticle><BookDocument><PMID>12</PMID><ArticleTitle>Book</ArticleTitle><Book><PubDate><Year>2026</Year></PubDate></Book></BookDocument></PubmedBookArticle></PubmedArticleSet>'
         self.assertEqual(metadata.pubmed_rows(xml,["12"])[0]["kind"],"book")
@@ -114,6 +129,19 @@ class RetrievalIntegrity(unittest.TestCase):
         s=Session();c=collect_sources.Client({},session=s,clock=lambda:10000,sleep=lambda x:None)
         with self.assertRaises(collect_sources.SourceFailure):c.get("https://www.ebi.ac.uk/europepmc/webservices/rest/search")
         self.assertEqual(s.count,3)
+
+    def test_ncbi_400_has_bounded_form_post_recovery(self):
+        class Response:
+            headers={};content=b'{}'
+            def __init__(self,status):self.status_code=status
+            def json(self):return {}
+        class Session:
+            gets=0;posts=0
+            def get(self,*a,**k):self.gets+=1;return Response(400)
+            def post(self,*a,**k):self.posts+=1;return Response(200)
+        s=Session();c=collect_sources.Client({},session=s,clock=lambda:10000,sleep=lambda x:None)
+        c.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",{"db":"pubmed","term":"x"})
+        self.assertEqual((s.gets,s.posts),(1,1))
 
 
 class ClassificationAndIdentity(unittest.TestCase):
@@ -155,6 +183,16 @@ class ClassificationAndIdentity(unittest.TestCase):
         sync.ingest(cat,[paper(retracted=True)],"CHIP_mCA",PROFILES,NOW,"r2")
         self.assertTrue(cat.data["papers"]["pmid:12345"]["retracted"])
 
+    def test_bounded_cache_keeps_highest_hot_and_real_history(self):
+        cat=catalogue.Catalogue()
+        for i in range(6):
+            p=paper(pmid=str(12345+i),doi="10.1000/test"+str(i),published="2026-10-"+str(19-i).zfill(2))
+            r=topics.classify(p,"CHIP_mCA",PROFILES["CHIP_mCA"],NOW)
+            cat.update(p,{"CHIP_mCA":r},NOW.isoformat(),"r1")
+        cat.bound(NOW,per_track=2)
+        self.assertEqual(set(cat.data["papers"]),{"pmid:12345","pmid:12346"})
+        self.assertEqual(cat.data["cache_policy"]["candidates_per_track"],2)
+
     def test_failed_old_day_remains_due_after_watermark(self):
         state=sync.initial_state(NOW)
         state["baseline_start"]="2026-09-01"
@@ -163,6 +201,13 @@ class ClassificationAndIdentity(unittest.TestCase):
         self.assertIn("2026-09-01",planned)
         self.assertIn("2026-10-20",planned)
         self.assertEqual(planned[0],"2026-10-19")
+
+    def test_recovery_only_reuses_fresh_verified_lanes(self):
+        state={"last_run":{"status":"partial","finished_at":(NOW-timedelta(hours=1)).isoformat()},
+               "lanes":{"good":{"run_status":"complete","last_complete_at":(NOW-timedelta(hours=2)).isoformat()},
+                        "bad":{"run_status":"failed","last_complete_at":(NOW-timedelta(hours=1)).isoformat()}}}
+        self.assertEqual(sync.recovery_plan(state,NOW),(True,{"good"}))
+        self.assertEqual(sync.recovery_plan(state,NOW+timedelta(hours=7)),(False,set()))
 
     def test_private_payload_rejected(self):
         with self.assertRaises(ValueError):catalogue.validate_public({"abstract":"private content"})

@@ -69,6 +69,20 @@ def daily_plan(state, lane_state, now):
     return sorted(days, key=lambda d: (0 if d >= (today-timedelta(days=1)).isoformat() else 1, d))
 
 
+def recovery_plan(state, now):
+    last = state.get("last_run", {})
+    try: fresh = 0 <= (now-hot.utc(last["finished_at"])).total_seconds() <= 6*3600
+    except (ValueError, TypeError, KeyError): fresh = False
+    enabled = last.get("status") == "partial" and fresh
+    reusable = set()
+    if enabled:
+        for key, lane in state.get("lanes", {}).items():
+            try: age = (now-hot.utc(lane["last_complete_at"])).total_seconds()
+            except (ValueError, TypeError, KeyError): continue
+            if lane.get("run_status") == "complete" and 0 <= age <= 6*3600: reusable.add(key)
+    return enabled, reusable
+
+
 def ingest(cat, rows, track, profiles, now, run_id):
     before = copy.deepcopy(cat.data)
     accepted = 0
@@ -89,6 +103,7 @@ def ingest(cat, rows, track, profiles, now, run_id):
                 if not existing and not any(r["eligible"] for r in ranks.values()): continue
                 cat.update(p, ranks, datetime.now(timezone.utc).isoformat(), run_id)
                 accepted += 1
+        cat.bound(now)
     except Exception:
         cat.data = before; cat.reindex(); raise
     return accepted
@@ -202,7 +217,9 @@ def run(root, budget_seconds=3300):
     previous = read(root/"readings.json", {})
     client = collect_sources.Client(state, budget_seconds)
     definitions = lane_definitions()
+    recovering, reusable = recovery_plan(state, started)
     for key, track, source, lane, name in definitions:
+        if key in reusable: continue
         ls = state["lanes"].setdefault(key, {})
         ls.update(run_status="pending", reason=None)
     # Unique ephemeral cache: never publish source responses or reuse stale partial pages across runs.
@@ -210,6 +227,7 @@ def run(root, budget_seconds=3300):
     cache = Path(tempfile.mkdtemp(prefix="scan-", dir=run_parent))
     completed, failed, source_records, budget = 0, 0, 0, False
     for key, track, source, lane, name in definitions:
+        if key in reusable: continue
         ls = state["lanes"][key]
         if budget:
             ls["reason"] = "run_budget_reached"; continue
@@ -221,7 +239,16 @@ def run(root, budget_seconds=3300):
             start = min(overlap, previous_through).isoformat()
             if ls.get("failed_from"): start = min(start, ls["failed_from"])
             plans = [(start, started.date().isoformat())]
-        else: plans = [(day, day) for day in daily_plan(state, ls, started)]
+        else:
+            days = daily_plan(state, ls, started)
+            if recovering:
+                def needs_retry(day):
+                    info = ls.get("days", {}).get(day, {})
+                    try: age = (started-hot.utc(info["checked_at"])).total_seconds()
+                    except (ValueError, TypeError, KeyError): return True
+                    return info.get("status") != "complete" or not 0 <= age <= 6*3600
+                days = [day for day in days if needs_retry(day)]
+            plans = [(day, day) for day in days]
         ls["window_start"] = min((p[0] for p in plans), default=started.date().isoformat())
         all_complete = True
         for start, end in plans:
@@ -261,9 +288,10 @@ def run(root, budget_seconds=3300):
         ls["unfinished_days"] = [day for day, info in ls.get("days", {}).items() if info["status"] != "complete"]
         save(root/"catalog.json", cat.data)
         save(root/"scan_state.json", state)
-    cat.trim(started)
+    cat.bound(started)
     status = "complete" if all(ls.get("run_status") == "complete" for ls in state["lanes"].values()) else "partial"
     state["last_run"] = {"id": run_id, "started_at": started.isoformat(), "finished_at": datetime.now(timezone.utc).isoformat(),
+                         "mode": "recovery" if recovering else "full_overlap", "reused_complete_lanes": len(reusable),
                          "status": status, "completed_partitions": completed, "failed_partitions": failed, "source_records": source_records,
                          "budget_reached": budget, "workflow_url": "https://github.com/"+os.environ.get("GITHUB_REPOSITORY", "liuhongwei2018/zhixin-literature")+"/actions/runs/"+os.environ.get("GITHUB_RUN_ID", "")}
     if not budget:
@@ -271,6 +299,7 @@ def run(root, budget_seconds=3300):
         except collect_sources.BudgetExpired: state["attention_refresh"] = {"status": "budget_reached"}
     else: state["attention_refresh"] = {"status": "budget_reached"}
     state["last_run"]["http_requests"] = client.requests
+    state["last_run"]["finished_at"] = datetime.now(timezone.utc).isoformat()
     state["history"] = (state.get("history", [])+[state["last_run"]])[-28:]
     # Keep aggregate daily checkpoints for 120 days; never drop failed gaps.
     cutoff = (started.date()-timedelta(days=120)).isoformat()

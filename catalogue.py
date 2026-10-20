@@ -176,6 +176,42 @@ class Catalogue:
         self.data["papers"] = keep
         self.reindex()
 
+    def bound(self, now, per_track=1000):
+        """Bound the runtime cache while screening every returned source record.
+
+        Keep a generous HOT candidate pool, subfield representatives and a small
+        quarantine. Full counter histories are needed only for visible HOT rows;
+        other papers retain their latest real observation per source entity.
+        """
+        self.trim(now)
+        keep, visible, quarantine = set(), set(), []
+        for track in topics_names():
+            rows = []
+            for key, p in self.data["papers"].items():
+                rank = p["rankings"].get(track)
+                if rank:
+                    scored = hot.score(p, rank, now)
+                    if scored["eligible"]: rows.append((scored["score"], key))
+            rows.sort(key=lambda x: (-x[0], x[1]))
+            keep.update(key for _, key in rows[:per_track])
+            visible.update(key for _, key in rows[:102])
+            if track == "omics_methods_applications":
+                for label in ("CUT&Tag / CUT&RUN", "ATAC", "GWAS", "单细胞 / 单核", "空间组学", "RNA / 转录组"):
+                    candidate = next((key for _, key in rows if label in self.data["papers"][key]["rankings"][track].get("labels", [])), None)
+                    if candidate: keep.add(candidate); visible.add(candidate)
+        for key, p in self.data["papers"].items():
+            if p.get("retracted") or p.get("identity_review"): quarantine.append(key)
+        keep.update(sorted(quarantine, key=lambda key: self.data["papers"][key]["last_seen"], reverse=True)[:100])
+        self.data["papers"] = {key:p for key,p in self.data["papers"].items() if key in keep}
+        for key, p in self.data["papers"].items():
+            histories = {}
+            for m in p.get("metrics", []): histories.setdefault((m["source"],m["entity"],m["metric"]), []).append(m)
+            limit = 8 if key in visible else 1
+            p["metrics"] = [m for group in histories.values() for m in sorted(group,key=lambda m:m["observed_at"])[-limit:]]
+        self.data["cache_policy"] = {"candidates_per_track":per_track,"extra_omics_representatives":True,"quarantine_limit":100,
+                                     "visible_counter_observations":8,"other_counter_observations":1,"retention_days":180}
+        self.reindex()
+
 
 def topics_names():
     return {"CHIP_mCA", "AI_medical_imaging", "omics_methods_applications", "clinical_observational"}

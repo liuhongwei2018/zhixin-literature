@@ -192,6 +192,55 @@ def epmc_range(query, start, end, *, date_field, scope, cache_dir, request, hard
         cursor = next_cursor
 
 
+def epmc_partitioned(query, start, end, *, date_field, request, hard_max=100000, page_limit=1000):
+    """Avoid unstable deep paging with disjoint publication-date shards.
+
+    Every leaf fits in one complete response. Missing publication dates are a
+    separate checked shard; parent/child counts and the final identity union
+    must agree. Publication date is a partition key, not a recency filter.
+    """
+    if date_field not in {"FIRST_IDATE", "UPDATE_DATE"}: raise ValueError("invalid_date_field")
+    base = f"({query}) AND {date_field}:[{start} TO {end}]"
+    def count(q):
+        d = request(dict(query=q,format="json",resultType="idlist",pageSize=1,cursorMark="*"))
+        try: n=int(d["hitCount"])
+        except (ValueError,TypeError,KeyError): raise IncompleteSearch("europepmc","invalid_partition_count")
+        if n<0 or n>hard_max: raise IncompleteSearch("europepmc","partition_count_limit")
+        return n
+    def leaf(q,n):
+        if n==0: return []
+        d=request(dict(query=q,format="json",resultType="core",pageSize=page_limit,cursorMark="*"))
+        rows=d.get("resultList",{}).get("result",[])
+        if int(d.get("hitCount",-1))!=n or len(rows)!=n:
+            raise IncompleteSearch("europepmc","partition_count_changed",expected=n,returned=len(rows))
+        ids=[epmc_identity(r) for r in rows]
+        checked_ids(ids,n,"europepmc",stage="single_page_partition")
+        return rows
+    total=count(base)
+    if total<=page_limit: rows=leaf(base,total)
+    else:
+        known_query=f"({base}) AND FIRST_PDATE:[* TO *]"
+        unknown_query=f"({base}) AND NOT FIRST_PDATE:[* TO *]"
+        known,unknown=count(known_query),count(unknown_query)
+        if known+unknown!=total: raise IncompleteSearch("europepmc","partition_union_count_mismatch")
+        if unknown>page_limit: raise IncompleteSearch("europepmc","undated_partition_overflow",expected=unknown)
+        def shard(lo,hi,n):
+            q=f"({base}) AND FIRST_PDATE:[{lo.isoformat()} TO {hi.isoformat()}]"
+            if n<=page_limit: return leaf(q,n)
+            if lo==hi: raise IncompleteSearch("europepmc","single_publication_day_overflow",expected=n,day=lo.isoformat())
+            mid=lo+(hi-lo)//2
+            right=mid+timedelta(days=1)
+            left_q=f"({base}) AND FIRST_PDATE:[{lo.isoformat()} TO {mid.isoformat()}]"
+            right_q=f"({base}) AND FIRST_PDATE:[{right.isoformat()} TO {hi.isoformat()}]"
+            nl,nr=count(left_q),count(right_q)
+            if nl+nr!=n: raise IncompleteSearch("europepmc","partition_count_changed",expected=n,observed=nl+nr)
+            return shard(lo,mid,nl)+shard(right,hi,nr)
+        rows=shard(date(1,1,1),date(9999,12,31),known)+leaf(unknown_query,unknown)
+    ids=[epmc_identity(r) for r in rows]
+    checked_ids(ids,total,"europepmc",stage="partition_union")
+    return complete_result("europepmc",date_field,start,end,ids,partitioning="disjoint_FIRST_PDATE_single_page_v1"),rows
+
+
 def validate_pubmed_xml(text, expected):
     try:
         root = ET.fromstring(text)
