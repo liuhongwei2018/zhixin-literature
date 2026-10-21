@@ -20,14 +20,17 @@ def text_list(value):
 
 def epmc_row(p):
     pmid=p.get('pmid');d=doi(p.get('doi'));src=p.get('source');i=str(p.get('id') or '')
+    journal=(p.get('journalInfo') or {}).get('journal') or {}
+    authors=[a.get('fullName') or a.get('collectiveName') or ' '.join(filter(None,[a.get('firstName'),a.get('lastName')])) for a in (p.get('authorList') or {}).get('author',[])]
+    if not any(authors) and p.get('authorString'):authors=[p['authorString']]
     return {'source':'epmc','id':str(src)+':'+i,'pmid':pmid,'pmcid':p.get('pmcid') or (i if src=='PMC' and i.startswith('PMC') else None),'doi':d,'title':p.get('title') or '',
+      'authors':[a for a in authors if a],'issns':list(dict.fromkeys(v for v in [journal.get('issn'),journal.get('essn')] if v)),
+      'journal':journal.get('title') or '', 'journal_abbreviation':journal.get('medlineAbbreviation') or '',
       'abstract':re.sub('<[^>]+>',' ',p.get('abstractText') or ''),'keywords':text_list((p.get('keywordList') or {}).get('keyword',[])),
-      'published':p.get('firstPublicationDate'),'indexed':p.get('firstIndexDate'),'updated':None,
+      'published':p.get('firstPublicationDate'),'indexed':p.get('firstIndexDate'),'updated':p.get('dateOfRevision'),
       'kind':'preprint' if src=='PPR' else 'journal','version':'',
-      'journal':((p.get('journalInfo') or {}).get('journal') or {}).get('title') or '',
-      'publication_types':text_list((p.get('pubTypeList') or {}).get('pubType',[])),
       'url':'https://pubmed.ncbi.nlm.nih.gov/'+pmid+'/' if pmid else ('https://doi.org/'+d if d else 'https://europepmc.org/article/'+str(src)+'/'+i),
-      'citations':p.get('citedByCount'),'retracted':p.get('isRetracted')=='Y'}
+      'publication_types':text_list((p.get('pubTypeList') or {}).get('pubType',[])),'citations':p.get('citedByCount'),'retracted':p.get('isRetracted')=='Y'}
 
 def arxiv_page(xml):
     ns={'a':'http://www.w3.org/2005/Atom','o':'http://a9.com/-/spec/opensearch/1.1/','x':'http://arxiv.org/schemas/atom'}
@@ -38,7 +41,7 @@ def arxiv_page(xml):
         base=re.sub(r'v\d+$','',ident)
         out.append({'source':'arxiv','id':base,'arxiv':base,'version':ident[len(base):],
            'doi':doi(e.findtext('x:doi',namespaces=ns)),'title':text(e.find('a:title',ns)),
-           'abstract':text(e.find('a:summary',ns)),'published':e.findtext('a:published',namespaces=ns),
+           'abstract':text(e.find('a:summary',ns)),'published':e.findtext('a:published',namespaces=ns),'authors':[text(a.find('a:name',ns)) for a in e.findall('a:author',ns)],'journal':'arXiv',
            'updated':e.findtext('a:updated',namespaces=ns),'kind':'preprint','url':'https://arxiv.org/abs/'+ident,'keywords':[]})
     return total,out
 
@@ -66,16 +69,20 @@ def pubmed_rows(xml,ids):
             history={x.get("PubStatus"):dates(x) for x in record.findall("PubmedData/History/PubMedPubDate")}
             retracted=any(x in pubtypes for x in ("Retracted Publication","Retraction of Publication")) or any(x.get("RefType") in ("RetractionIn","RetractionOf") for x in med.findall("CommentsCorrectionsList/CommentsCorrections"))
             journal=text(article.find("Journal/Title"))
+            authors=[text(x.find('CollectiveName')) or ' '.join(filter(None,[x.findtext('ForeName') or x.findtext('Initials'),x.findtext('LastName')])) for x in article.findall('AuthorList/Author')]
+            issns=list(dict.fromkeys(x.text for x in article.findall('Journal/ISSN')+med.findall('MedlineJournalInfo/ISSNLinking') if x.text))
+            journal_abbreviation=article.findtext('Journal/ISOAbbreviation') or med.findtext('MedlineJournalInfo/MedlineTA') or ''
             kind="preprint" if "Preprint" in pubtypes else "journal"
         elif record.tag=="PubmedBookArticle":
             data=record.find("BookDocument");pmid=data.findtext("PMID");a=text(data.find("ArticleTitle")) or text(data.find("Book/BookTitle"))
             abstract=" ".join(text(x) for x in data.findall("Abstract/AbstractText"));doi_ids=[];pmc_ids=[];keywords=[]
-            pds=[{"value":dates(x),"type":"book"} for x in data.findall("Book/PubDate")];pubtypes=["Book"];history={};retracted=False;journal="";kind="book"
+            pds=[{"value":dates(x),"type":"book"} for x in data.findall("Book/PubDate")];pubtypes=["Book"];history={};retracted=False;journal="";kind="book";authors=[];issns=[];journal_abbreviation=''
         else:raise SourceError("unsupported_pubmed_record_type")
         if not pmid:raise SourceError("pubmed_missing_id")
         observed.append(pmid);published=next((x["value"] for x in pds if re.fullmatch(r"\d{4}-\d{2}-\d{2}",x["value"])),pds[0]["value"] if pds else None)
         rows.append({"source":"pubmed","id":pmid,"pmid":pmid,"doi":doi(doi_ids[0]) if doi_ids else None,"pmcid":pmc_ids[0] if pmc_ids else None,
             "title":a,"abstract":abstract,"keywords":keywords,"publication_dates":pds,"publication_types":pubtypes,"publication_history":history,"journal":journal,
-            "published":published,"updated":None,"kind":kind,"version":"","url":"https://pubmed.ncbi.nlm.nih.gov/"+pmid+"/","retracted":retracted})
+            "published":published,"updated":None,"kind":kind,"version":"","url":"https://pubmed.ncbi.nlm.nih.gov/"+pmid+"/","retracted":retracted,
+            "authors":[a for a in authors if a],"issns":issns,"journal_abbreviation":journal_abbreviation})
     if len(observed)!=len(set(observed)) or set(observed)!=set(ids):raise SourceError("pubmed_fetch_id_mismatch")
     return rows

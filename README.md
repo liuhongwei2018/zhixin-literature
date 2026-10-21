@@ -53,3 +53,8 @@ PMID、DOI、PMCID、arXiv 标识和来源明确登记的预印本/正式发表�
 Python 3.12；安装 `requirements.txt`，运行 `python -m unittest -v test_cloud test_export_public`。`python sync.py` 执行检索；`python sync.py --validate` 核验公开结构与敏感字段；`python sync.py --build-site site` 生成网站白名单。
 
 首次仓库包含已核对公开题录的有限种子，初始覆盖状态为待验证。只有真实云端运行才标记云端已接通；运行缺口继续显示。完整源状态见网站覆盖表与 `scan_state.json`，源查询及分页完整不等于已经验证所有方向的科学召回率。
+
+
+## 期刊资料与作者
+
+清单显示来源作者名单、发表日期和期刊，并匹配 2025 年影响因子及 2026 年新锐分区。期刊查询表经项目所有者授权公开，按 ISSN/eISSN 优先、唯一完整名称或官方缩写其次匹配；冲突、缺失和预印本不以零值代替。新锐分区保留学科信息，不等同于 JCR 四分位或中科院分区。期刊指标不进入 HOT 计算。作者元数据通过原有公开来源更新；历史条目尚未补全时显示“来源待补”。

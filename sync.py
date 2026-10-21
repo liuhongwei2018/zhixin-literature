@@ -148,7 +148,7 @@ def public_report(cat, state, now, previous=None):
         for row in chosen:
             key = row["key"]; paper = cat.data["papers"][key]
             if key not in doc["papers"]:
-                doc["papers"][key] = {field: paper.get(field) for field in ("key", "url", "title", "journal", "published", "version_updated", "first_seen", "source", "sources", "kind")}
+                doc["papers"][key] = {field: paper.get(field) for field in ("key", "url", "title", "journal", "authors", "issns", "journal_abbreviation", "published", "version_updated", "first_seen", "source", "sources", "kind")}
                 doc["papers"][key]["tracks"] = []
             doc["papers"][key]["tracks"].append(track)
             r = row["rank"]
@@ -315,7 +315,7 @@ def run(root, budget_seconds=3300):
 
 
 def validate(root):
-    for name in ("catalog.json", "scan_state.json", "readings.json", "weekly.json", "queries.json", "publication_rules.json"):
+    for name in ("catalog.json", "scan_state.json", "readings.json", "weekly.json", "queries.json", "publication_rules.json", "journal_metrics.json"):
         catalogue.validate_public(read(root/name))
     doc = read(root/"readings.json")
     if doc["schema_version"] != 2 or not doc["formal_hot_enabled"] or doc["push_enabled"]: raise ValueError("invalid_feature_flags")
@@ -335,7 +335,7 @@ def build_site(root, target):
     validate(root)
     if target.exists(): raise ValueError("site_target_already_exists")
     target.mkdir(mode=0o700)
-    for name in ("index.html", "app.js", "style.css", "favicon.svg", "readings.json", "weekly.json"):
+    for name in ("index.html", "app.js", "style.css", "favicon.svg", "readings.json", "weekly.json", "journal_metrics.json"):
         shutil.copyfile(root/name, target/name)
     (target/".nojekyll").write_text("")
 

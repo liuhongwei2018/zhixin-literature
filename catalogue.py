@@ -115,7 +115,10 @@ class Catalogue:
                   "source": old.get("source") if retain_journal else source,
                   "kind": "journal" if incoming_journal or old.get("kind") == "journal" else "preprint",
                   "title": old.get("title") if retain_journal else text(p.get("title")) or old.get("title", ""),
-                  "journal": text(p.get("journal"), 200) or old.get("journal", ""),
+                  "journal": old.get('journal','') if retain_journal else text(p.get("journal"), 200) or old.get("journal", ""),
+                  "authors": old.get('authors',[]) if retain_journal else [text(a,200) for a in p.get('authors',[]) if a] or old.get('authors',[]),
+                  "issns": old.get('issns',[]) if retain_journal else p.get('issns') or old.get('issns',[]),
+                  "journal_abbreviation": old.get('journal_abbreviation','') if retain_journal else text(p.get('journal_abbreviation'),200) or old.get('journal_abbreviation',''),
                   "rankings": old.get("rankings", {}), "metrics": old.get("metrics", [])}
         record["journal_doi"] = next(iter(journal_dois), None)
         published = next((r.get("published") for r in rankings.values() if r.get("published")), valid_date(p.get("published")))

@@ -149,7 +149,7 @@ def preprints(client, server, start, end, cache):
             if identity in ids: raise SourceFailure(server+"_duplicate_versions")
             ids.add(identity)
             rows.append({"source": server, "id": ident+"v"+version, "doi": ident,
-                "published_doi": metadata.doi(p.get("published")), "title": p.get("title") or "",
+                "published_doi": metadata.doi(p.get("published")), "title": p.get("title") or "", "authors":[a.strip() for a in (p.get('authors') or '').split(';') if a.strip()],
                 "abstract": p.get("abstract") or "", "keywords": [], "published": p.get("date"),
                 "updated": p.get("date"), "version_date": p.get("date"), "version": version, "kind": "preprint", "journal": server})
         if len(rows) > expected: raise SourceFailure(server+"_excess_records")
